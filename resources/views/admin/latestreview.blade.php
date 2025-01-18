@@ -3,13 +3,10 @@
     <div class="messages">
         @foreach ($reviews as $review)
             <div class="message d-flex align-items-center">
-                <div class="profile">
-                    <img src="{{ asset('admincss/img/avatar-3.jpg') }}" alt="User Image" class="img-fluid">
-                </div>
                 <div class="content">
-                    <strong class="d-block">{{ $review->name }}</strong>
+                    <strong class="d-block" style="color: rgb(212, 73, 73)">{{ $review->name }}</strong>
                     <span class="d-block">"{{ $review->review }}"</span>
-                </div>
+                </div> <br><br>
             </div>
         @endforeach
     </div>

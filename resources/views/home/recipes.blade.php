@@ -96,6 +96,14 @@
                 font-size: 50px;
                 text-align: center;
             }
+
+            .recipe-image {
+                width: 320px;
+                height: 300px;
+                object-fit: cover; /* Ensures the image fits within the specified dimensions while maintaining proportions */
+                padding: 20px;
+            }
+
         </style>
    </head>
    <body>
@@ -112,22 +120,17 @@
 
       <div class="main-container">
         
-       @foreach ($recipes as $recipe)
-
-       <div class="recipes">
-        <img src="/recipeimage/{{$recipe->image}}" alt="" height="300px" width="320px" style="padding: 20px">
-        <div class="text">
-            <h3>{{$recipe->title}}</h3>
-            <p><b>Ingredients: </b>{{$recipe->ingredients}}</p>
-            <p><b>Process: </b>{{$recipe->details}}</p>
-            
+        @foreach ($recipes as $recipe)
+        <div class="recipes">
+            <img src="/recipeimage/{{$recipe->image}}" alt="{{$recipe->title}}" class="recipe-image">
+            <div class="text">
+                <h3>{{$recipe->title}}</h3>
+                <p><b>Ingredients: </b>{{$recipe->ingredients}}</p>
+                <p><b>Process: </b>{{$recipe->details}}</p>
+            </div>
         </div>
-
-        
-       </div>
-           
-       @endforeach
-        
+    @endforeach
+    
 
 
 
