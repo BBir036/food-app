@@ -8,8 +8,8 @@
             @foreach ($recipe as $recipe)
 
             <div class="col-md-4">
-               <div class="image-container" style="height: 300px; width:300px"><img  src="/recipeimage/{{$recipe->image}}" class="services_img" height="100px" width="300px"></div>
-               <h3 style="font-size: 1.5rem; font-weight: bold;">{{$recipe->title}}</h3>
+               <div class="image-container" style="height: 300px; width:300px"><img  src="/recipeimage/{{$recipe->image}}" class="services_img" height="100px" width="300px"></div><br><br>
+               <br><h3 style="font-size: 1.5rem; font-weight: bold;">{{$recipe->title}}</h3>
 
                
                

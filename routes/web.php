@@ -11,22 +11,21 @@ use App\Http\Controllers\ReviewController;
 
 Route::get('/',[AdminController::class,'homepage']);
 
+/* page controllers*/
+
 
 route::get('/home',[PageController::class,'index'])->name('home');
-
 Route::get('/recipes', [PageController::class, 'recipes'])->name('recipes');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/videoTutorials', [PageController::class, 'videoTutorials'])->name('videoTutorials');
 
 
 
+
+/*AdAdmin controllers*/ 
+
 Route::get('/recipe_page',[AdAdminController::class,'recipe_page']);
-
 Route::post('/add_recipe',[AdAdminController::class,'add_recipe']);
-
-
-/*Route::get('/index',[AdAdminController::class,'index']);*/
-
 
 Route::get('/recipe_data',[AdAdminController::class,'recipe_data']);
 
@@ -37,6 +36,25 @@ Route::get('/edit_recipe/{id}',[AdAdminController::class,'edit_recipe']);
 Route::get('/dashboard',[AdAdminController::class,'dashboard']);
 
 Route::post('/editrecipe/{id}',[AdAdminController::class,'editrecipe']);
+
+
+Route::get('/home', function () {
+    if (Auth::check() && Auth::user()->usertype === 'admin') {
+        return redirect('/dashboard');
+    }
+
+    return redirect('/'); 
+});
+
+//Route::get('/admin/latestreview', [AdAdminController::class, 'latestreview'])->name('admin.latestreview');
+
+
+
+
+
+
+//admin controllers
+
 
 Route::get('/recipe_details/{id}',[AdminController::class,'recipe_details']);
 

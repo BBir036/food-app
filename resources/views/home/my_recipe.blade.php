@@ -105,25 +105,25 @@
 
       <div class="main-container">
         
-       @foreach ($data as $item)
-
-       <div class="recipes">
-        <img src="/recipeimage/{{$item->image}}" alt="" height="300px" width="320px" style="padding: 20px">
-        <div class="text">
-            <h3>{{$item->title}}</h3>
-            <p><b>Ingredients: </b>{{$item->ingredients}}</p>
-            <p><b>Process: </b>{{$item->details}}</p>
-            <div>
-                <a href="{{url('rec_del', $item->id)}}" class="btn btn-danger" onclick="confirmation(event)">Delete</a>
-                <a href="{{url('rec_update', $item->id)}}" class="btn btn-success">Update</a>
+        @if ($data->isEmpty())
+        <p style="text-align: center; font-size: 18px; margin-top: 20px; color:black">You haven't added any recipes yet.</p>
+        @else
+        @foreach ($data as $item)
+            <div class="recipes">
+                <img src="/recipeimage/{{$item->image}}" alt="" height="300px" width="320px" style="padding: 20px">
+                <div class="text">
+                    <h3>{{$item->title}}</h3>
+                    <p><b>Ingredients: </b>{{$item->ingredients}}</p>
+                    <p><b>Process: </b>{{$item->details}}</p>
+                    <div>
+                        <a href="{{url('rec_del', $item->id)}}" class="btn btn-danger" onclick="confirmation(event)">Delete</a>
+                        <a href="{{url('rec_update', $item->id)}}" class="btn btn-success">Update</a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        
-       </div>
-           
-       @endforeach
-        
+        @endforeach
+    @endif
+      
 
 
 

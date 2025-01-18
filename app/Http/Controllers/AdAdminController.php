@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Recipe;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Review;
 
 class AdAdminController extends Controller
 {
@@ -88,8 +89,12 @@ class AdAdminController extends Controller
     }
 
     public function dashboard(){
-        return view('admin.index');
+
+        $reviews = Review::latest()->take(2)->get();
+        return view('admin.index',compact('reviews'));
     }
+    
+
 }
 
 
