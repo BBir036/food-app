@@ -23,6 +23,16 @@
               <i class="icon-grid"></i> Manage Recipes
           </a>
       </li>
+
+      <!-- Manage review -->
+
+      <li class="{{ request()->is('review_all') ? 'active' : '' }} dropdown">
+        <a href="{{ url('review_all') }}">
+            <i class="icon-grid"></i> Manage Reviews
+        </a>
+    </li>
+
+
   </ul>
   
 </nav>

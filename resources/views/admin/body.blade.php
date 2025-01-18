@@ -75,7 +75,7 @@
                                     <label for="task-1">Approve new recipe submissions</label>
                                 </div>
                                 <div class="item d-flex align-items-center">
-                                    <input type="checkbox" id="task-2" name="task-2" checked class="checkbox-template">
+                                    <input type="checkbox" id="task-2" name="task-2" class="checkbox-template">
                                     <label for="task-2">Review reported comments</label>
                                 </div>
                                 <div class="item d-flex align-items-center">

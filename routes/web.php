@@ -29,6 +29,11 @@ Route::post('/add_recipe',[AdAdminController::class,'add_recipe']);
 
 Route::get('/recipe_data',[AdAdminController::class,'recipe_data']);
 
+Route::get('/review_all', [AdAdminController::class, 'review_all']);
+
+
+Route::get('/delete_review/{id}',[AdAdminController::class,'delete_review']);
+
 Route::get('/delete_recipe/{id}',[AdAdminController::class,'delete_recipe']);
 
 Route::get('/edit_recipe/{id}',[AdAdminController::class,'edit_recipe']);

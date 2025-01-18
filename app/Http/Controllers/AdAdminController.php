@@ -50,6 +50,17 @@ class AdAdminController extends Controller
         
     }
 
+
+    public function review_all() {
+        // Fetch all reviews from the Review model
+        $reviews = Review::all();
+    
+        // Return the 'admin.review' view with the reviews data
+        return view('admin.review', compact('reviews'));
+    }
+    
+
+
     public function recipe_data(){
 
         $recipe = Recipe::all();
@@ -62,6 +73,13 @@ class AdAdminController extends Controller
 
         $recipe->delete();
         return redirect()->back()->with('message','Recipe Deleted Successfully.');
+    }
+
+    public function delete_review($id){
+        $review = Review::find($id);
+
+        $review->delete();
+        return redirect()->back()->with('message','Review Deleted Successfully.');
     }
 
     public function edit_recipe($id){
