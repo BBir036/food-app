@@ -21,7 +21,7 @@
       gap: 20px;
     }
     .card {
-      background-color: rgba(45, 48, 53);
+      background-color: black;
       padding: 20px;
       width: calc(50% - 20px);
       box-sizing: border-box;
@@ -46,7 +46,7 @@
   <div class="dashboard">
     <!-- Recipe Trends -->
     <div class="card">
-      <h2>Recipe Trends</h2>
+      <h2 style="color: black">Recipe Trends</h2>
       <div class="chart-container">
         <canvas id="recipeTrendsChart"></canvas>
       </div>
@@ -54,7 +54,7 @@
 
     <!-- User Engagement -->
     <div class="card">
-      <h2>User Engagement</h2>
+      <h2 style="color: black">User Engagement</h2>
       <div class="chart-container">
         <canvas id="userEngagementChart"></canvas>
       </div>

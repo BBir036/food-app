@@ -19,6 +19,15 @@
             display: inline-block;
             width: 200px;
         }
+        .btn{
+            color: black;
+        }
+        .btn:hover{
+            color: red;
+        }
+        th{
+            color: black;
+        }
     </style>
   </head>
   <body>
@@ -38,7 +47,7 @@
             
         @endif
 
-        <h1 class="recipe_title">Add Recipe</h1>
+        <h1 class="recipe_title" style="color: black">Add Recipe</h1>
 
         <div>
             <form action="{{url('add_recipe')}}" method="POST" enctype="multipart/form-data">

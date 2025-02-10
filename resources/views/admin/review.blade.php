@@ -34,6 +34,15 @@
         html {
             overflow-x: hidden;
         }
+        .btn{
+            color: black;
+        }
+        .btn:hover{
+            color: red;
+        }
+        th{
+            color: black;
+        }
     </style>
   </head>
   <body>
@@ -52,7 +61,7 @@
         </div>
         @endif
 
-        <h1 class="review_title">All Reviews</h1>
+        <h1 class="review_title"style="color: black">All Reviews</h1>
 
         <div class="table">
             <table border="1" cellspacing="0">

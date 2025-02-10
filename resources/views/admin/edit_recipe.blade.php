@@ -43,7 +43,7 @@
         
 
 
-        <h1 class="recipe_title">Edit Recipe</h1>
+        <h1 class="recipe_title"style="color: black">Edit Recipe</h1>
 
         <form action="{{url('editrecipe',$recipe->id)}}" method="POST" enctype="multipart/form-data">
 
